@@ -3,48 +3,85 @@
 
   const navigation = [
     {
-      name: "WebDev",
-      href: "/webdev",
+      name: "VisualUI",
+      href: "/visual",
       children: [
         {
-          name: "TypeScript",
-          href: "/webdev/typescript",
-        },
-        {
-          name: "Asynchronous JavaScript",
-          href: "/webdev/async",
-        },
-        {
-          name: "Svelte and SvelteKit",
-          href: "/webdev/svelte",
-        },
-        {
           name: "TailwindCSS",
-          href: "/webdev/tailwind",
+          href: "/visual/tailwind",
         },
         {
           name: "Catppuccin",
-          href: "/webdev/catppuccin",
+          href: "/visual/catppuccin",
+        },
+      ],
+    },
+    {
+      name: "Javascript",
+      href: "/js",
+      children: [
+        {
+          name: "Asynchronous JavaScript",
+          href: "/js/async",
+        },
+        {
+          name: "TypeScript",
+          href: "/js/typescript",
+        },
+      ],
+    },
+    {
+      name: "Frameworks",
+      href: "/frameworks",
+      children: [
+        {
+          name: "Svelte and SvelteKit",
+          href: "/frameworks/svelte",
+        },
+      ],
+    },
+    {
+      name: "Linux",
+      href: "/linux",
+      children: [
+        {
+          name: "RHEL/Rocky Linux",
+          href: "/linux/rhel",
+        },
+        {
+          name: "Common Linux Commands",
+          href: "/linux/common",
         },
       ],
     },
   ];
 </script>
 
-<main class="mocha min-h-screen bg-base text-text">
-  <nav class="text-blue underline flex flex-col">
-    {#each navigation as nav}
-      <a href={nav.href}>{nav.name}</a>
-      {#if nav.children}
-        <ul class="list-disc ml-8">
-          {#each nav.children as child}
-            <li>
-              <a href={child.href}>{child.name}</a>
-            </li>
-          {/each}
-        </ul>
-      {/if}
-    {/each}
-  </nav>
-  <slot />
-</main>
+<div class="mocha bg-base text-text">
+  <header class="bg-mantle p-4 shadow-xl">
+    <a href="/">
+      <h1 class="text-4xl font-bold text-green">Izac Wiki</h1>
+    </a>
+  </header>
+  <main class="min-h-screen flex pt-12">
+    <nav class="text-green flex flex-col sticky top-0">
+      <ul class="list-disc text-green ml-8">
+        {#each navigation as nav}
+          <li>
+            <a href={nav.href} class="text-blue underline">{nav.name}</a>
+            {#if nav.children}
+              <ul class="list-square ml-8">
+                {#each nav.children as child}
+                  <li>
+                    <a href={child.href} class="text-blue underline">{child.name}</a>
+                  </li>
+                {/each}
+              </ul>
+            {/if}
+          </li>
+        {/each}
+      </ul>
+    </nav>
+    <slot />
+  </main>
+</div>

@@ -7,7 +7,7 @@
   <section class="mb-12">
     <h1 class="text-2xl font-bold mb-4">Catppuccin Theme</h1>
     <p>Catppuccin is a community-driven pastel theme that aims to be the middle ground between low and high contrast themes. It consists of 4 soothing warm flavors with 26 eye-candy colors each, perfect for coding, designing, and much more! In addition, this repository tracks the development of the actual color palette, the project's documentation, organization-wide assets, resources and code samples for maintainers/developers.</p>
-    <a href="https://github.com/catppuccin/catppuccin" class="text-blue underline">Catppuccin GitHub</a>
+    <a href="https://github.com/catppuccin/catppuccin" class="text-green underline">Catppuccin GitHub</a>
   </section>
   <section class="mb-12">
     <h1 class="text-2xl font-bold mb-4">Colors</h1>
