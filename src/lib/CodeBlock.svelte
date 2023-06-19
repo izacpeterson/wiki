@@ -5,7 +5,7 @@
 <div class="p-4 rounded-md mb-4 bg-surface0">
   <div class="code-container">
     <pre>
-      <code class="font-mono">
+      <code class="font-mono flex flex-col">
         {#each code as line}
           <div>{line}</div>
         {/each}
