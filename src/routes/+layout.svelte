@@ -1,6 +1,7 @@
 <script>
   import "../app.css";
   import Logo from "$lib/images/Logo.svg";
+  import Nav from "$lib/Nav.svelte";
 
   const navigation = [
     {
@@ -75,14 +76,15 @@
 </script>
 
 <div class="mocha bg-base text-text">
-  <header class="bg-mantle p-4 shadow-xl flex">
+  <header class="bg-mantle p-4 shadow-xl flex justify-between">
     <img src={Logo} alt="" class="w-12 mr-8" />
     <a href="/">
       <h1 class="text-4xl font-bold text-green">Izac Wiki</h1>
     </a>
+    <Nav items={navigation} />
   </header>
   <main class="min-h-screen flex pt-12">
-    <nav class="text-green flex flex-col sticky top-0">
+    <nav class="hidden text-green lg:flex flex-col sticky top-0">
       <ul class="list-disc text-blue underline ml-8">
         {#each navigation as nav}
           <li>
