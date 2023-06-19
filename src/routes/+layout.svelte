@@ -26,6 +26,22 @@
           href: "/js/async",
         },
         {
+          name: "Object Oriented Programming",
+          href: "/js/oop",
+        },
+        {
+          name: "Functional Programming",
+          href: "/js/functional",
+        },
+        // {
+        //   name: "Regular Expressions",
+        //   href: "/js/regex",
+        // },
+        // {
+        //   name: "Node.js",
+        //   href: "/js/node",
+        // },
+        {
           name: "TypeScript",
           href: "/js/typescript",
         },
